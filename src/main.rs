@@ -26,7 +26,7 @@ impl HelloWorld for HelloWorldService {
         let input = request.get_ref();
 
         let reply = HelloReply {
-            message: format!("{} {}!", &self.greeting, input.name),
+            message: format!("{} {}!", self.greeting, input.name),
         };
 
         Ok(Response::new(reply))
